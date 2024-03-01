@@ -1,30 +1,38 @@
 .container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100vh;
   height: 100%;
+  color: #006e67;
 
   background: #000c15;
-  overflow: hidden;
 
-  h1 {
-    font-size: 5rem;
-    color: #00867d;
+  justify-content: center;
+  align-items: center;
+
+  .teste {
+    height: 1700px;
   }
 
-  .animate {
-    font-size: 5rem;
-    color: #004b46;
+  .title {
+    display: flex;
+    height: 100%;
+    color: #006e67;
 
-    animation: animate 4s ease-in-out infinite;
+    h1 {
+      font-size: 5rem;
+      color: var(--var-green);
+    }
 
-    position: absolute;
-
-    top: 0;
-    left: 0;
+    .animate {
+      color: #004b46;
+      animation: animate 4s ease-in-out infinite;
+      position: absolute;
+      z-index: 1;
+    }
   }
 }
-
 
 @keyframes animate {
   0%,
@@ -50,33 +58,6 @@
       67% 50%,
       84% 45%,
       100% 46%,
-      100% 100%,
-      0% 100%
-    );
-  }
-}
-
-@keyframes wave {
-  0%, 100% {
-    clip-path: polygon(
-      0% 75%,
-      20% 70%,
-      40% 75%,
-      60% 70%,
-      80% 75%,
-      100% 70%,
-      100% 100%,
-      0% 100%
-    );
-  }
-  50% {
-    clip-path: polygon(
-      0% 70%,
-      20% 75%,
-      40% 70%,
-      60% 75%,
-      80% 70%,
-      100% 75%,
       100% 100%,
       0% 100%
     );
