@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  background: #000c15;
+  overflow: hidden;
+
+  h1 {
+    font-size: 5rem;
+    color: #00867d;
+  }
+
+  .animate {
+    font-size: 5rem;
+    color: #004b46;
+
+    animation: animate 4s ease-in-out infinite;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 40%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    clip-path: polygon(
+      0% 75%,
+      20% 70%,
+      40% 75%,
+      60% 70%,
+      80% 75%,
+      100% 70%,
+      100% 100%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 70%,
+      20% 75%,
+      40% 70%,
+      60% 75%,
+      80% 70%,
+      100% 75%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
