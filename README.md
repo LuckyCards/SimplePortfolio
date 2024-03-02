@@ -9,6 +9,7 @@
 
 ```
 npm install sass
+npm i @phosphor-icons/react
 
 ```
 
