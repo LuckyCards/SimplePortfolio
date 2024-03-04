@@ -1,0 +1,24 @@
+.container {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  gap: 4rem;
+  min-height: 65px;
+
+
+  button {
+    background: none;
+    color: aliceblue;
+    font-size: 1.1rem;
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: rgb(255, 230, 0);
+      cursor: pointer;
+    }
+  }
+}
