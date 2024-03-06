@@ -7,12 +7,37 @@ import {
 import style from "./style.module.scss";
 import presentationVideo from "../../../public/background.mp4";
 import MenuHeader from "../../components/MenuHeader/index.js";
+import AboutPage from "../AboutPage";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  function HandleScroll() {
+    setScrollY((prev) => sectionRef.current?.scrollTop || prev);
+  }
+
+  useEffect(() => {
+    // console.log(sectionRef.current?.scrollTop);
+    sectionRef.current?.addEventListener("scroll", HandleScroll);
+
+    return () => {
+      sectionRef.current?.removeEventListener("scroll", HandleScroll);
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log(scrollY);
+  }, [scrollY]);
 
   return (
-    <section className={style.container}>
-      <div className={style.presentation} >
+    <section ref={sectionRef} className={style.container}>
+      <div className={style.presentation}>
+        <div className={style.boxTitle}>
+          <h1 className={style.title}>Diving</h1>
+          <h2 className={style.subtitle}>Mergulhe profundo, explore o mundo</h2>
+        </div>
         <div className={style.social}>
           <a href="" target="_blank">
             <TwitterLogo className={style.socialIcons} />
@@ -34,13 +59,10 @@ export default function Home() {
           src={presentationVideo}
           className={style.presentationVideo}
         />
-        <div className={style.boxTitle}>
-          <h1 className={style.title}>Diving</h1>
-          <h2 className={style.subtitle}>Mergulhe profundo, explore o mundo</h2>
-        </div>
       </div>
       <MenuHeader />
       <main className={style.main}>
+        <AboutPage />
         <div className={style.about}>Sobre</div>
         <div className={style.services}>Serviços</div>
         <div className={style.galery}>Galeria</div>
