@@ -19,12 +19,4 @@ html {
   background-color: var(--background-color);
 }
 
-section::-webkit-scrollbar {
-  width: 7px;
-}
 
-section::-webkit-scrollbar-thumb {
-  --scrollbar-color: rgb(56, 64, 108);
-  box-shadow: inset 20px 20px 100px var(--scrollbar-color);
-  -webkit-border-radius: 7px;
-}
