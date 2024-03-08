@@ -19,7 +19,7 @@ export default function Home() {
     if (currentScrollY === 0 && event.deltaY < 0) {
       setScrollCount((prevCount) => prevCount + 1);
     }
-    if (event.deltaY > 0 && scrollCount >= 10) {
+    if (event.deltaY > 0 && scrollCount >= 5) {
       setScrollCount(0);
     }
   }
@@ -30,20 +30,16 @@ export default function Home() {
     return () => {
       sectionRef.current?.removeEventListener("wheel", HandleScroll);
     };
-  }, []);
+  }, [HandleScroll, sectionRef]);
 
   useEffect(() => {
-    console.log(scrollY);
     if (scrollCount >= 5) {
       setPresentationView(style.showPresentationView);
-
       if (scrollY > 0) {
         setScrollCount(0);
       }
     } else {
       setPresentationView(style.hiddenPresentationView);
-
-      // console.log(scrollCount);
     }
   }, [scrollY, scrollCount]);
 
