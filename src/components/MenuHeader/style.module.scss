@@ -8,14 +8,14 @@
   background: none;
   gap: 4rem;
   min-height: 65px;
-
-  
+  z-index: 10;
+  backdrop-filter: blur(10px);
 
   button {
     background: none;
     color: aliceblue;
     font-size: 1.1rem;
-    transition: color .3s ease-out;
+    transition: color 0.3s ease-out;
 
     &:hover {
       color: rgb(255, 230, 0);

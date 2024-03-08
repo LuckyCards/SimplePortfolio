@@ -1,5 +1,5 @@
 :root {
-  --background-color: #07172c;
+  --background-color: linear-gradient(90deg, #000d1a, #07172c, #000d1a);
 }
 
 * {
@@ -16,7 +16,5 @@ body {
   overflow: hidden;
 }
 html {
-  background-color: var(--background-color);
+  background: var(--background-color);
 }
-
-
