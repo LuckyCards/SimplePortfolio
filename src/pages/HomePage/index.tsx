@@ -13,24 +13,24 @@ export default function Home() {
   );
   const sectionRef = useRef<HTMLElement>(null);
 
-  function HandleScroll(event: WheelEvent) {
-    const currentScrollY = sectionRef.current?.scrollTop || 0;
-    setScrollY(currentScrollY);
-    if (currentScrollY === 0 && event.deltaY < 0) {
-      setScrollCount((prevCount) => prevCount + 1);
-    }
-    if (event.deltaY > 0 && scrollCount >= 5) {
-      setScrollCount(0);
-    }
-  }
-
   useEffect(() => {
+    function HandleScroll(event: WheelEvent) {
+      const currentScrollY = sectionRef.current?.scrollTop || 0;
+      setScrollY(currentScrollY);
+      if (currentScrollY === 0 && event.deltaY < 0) {
+        setScrollCount((prevCount) => prevCount + 1);
+      }
+      if (event.deltaY > 0 && scrollCount >= 5) {
+        setScrollCount(0);
+      }
+    }
+
     sectionRef.current?.addEventListener("wheel", HandleScroll);
 
     return () => {
       sectionRef.current?.removeEventListener("wheel", HandleScroll);
     };
-  }, [HandleScroll, sectionRef]);
+  }, [scrollCount]);
 
   useEffect(() => {
     if (scrollCount >= 5) {
