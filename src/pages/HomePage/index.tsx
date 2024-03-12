@@ -6,10 +6,12 @@ import AboutPage from "../AboutPage";
 import Presentation from "./presentation.tsx";
 
 export default function Home() {
+  const minScrollStrength = 3;
   const [scrollY, setScrollY] = useState(0);
-  const [scrollCount, setScrollCount] = useState(0);
+  const [scrollCount, setScrollCount] = useState(minScrollStrength);
+
   const [PresentationView, setPresentationView] = useState(
-    style.showPresentation
+    style.showPresentationView
   );
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -20,7 +22,7 @@ export default function Home() {
       if (currentScrollY === 0 && event.deltaY < 0) {
         setScrollCount((prevCount) => prevCount + 1);
       }
-      if (event.deltaY > 0 && scrollCount >= 5) {
+      if (event.deltaY > 0 && scrollCount >= minScrollStrength) {
         setScrollCount(0);
       }
     }
@@ -33,7 +35,7 @@ export default function Home() {
   }, [scrollCount]);
 
   useEffect(() => {
-    if (scrollCount >= 5) {
+    if (scrollCount >= minScrollStrength) {
       setPresentationView(style.showPresentationView);
       if (scrollY > 0) {
         setScrollCount(0);

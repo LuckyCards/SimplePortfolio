@@ -6,17 +6,16 @@ import {
   TwitterLogo,
   YoutubeLogo,
 } from "@phosphor-icons/react";
-
-
+import TextScrambler from "../../utils/textScrambler";
 
 export default function Presentation() {
-
-
   return (
     <div className={style.presentationView}>
       <div className={style.boxTitle}>
-        <h1 className={style.title}>Diving</h1>
-        <h2 className={style.subtitle}>Mergulhe profundo, explore o mundo</h2>
+        <h1 className={style.title}>
+          <TextScrambler />
+        </h1>
+        <h2 className={style.subtitle}>Desenvolvedor Front-End</h2>
       </div>
       <div className={style.social}>
         <a href="" target="_blank">

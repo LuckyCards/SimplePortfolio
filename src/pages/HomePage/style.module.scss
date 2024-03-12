@@ -37,6 +37,7 @@
       top: 0;
       z-index: -5;
       object-fit: cover;
+      filter: blur(4px);
     }
 
     .social {
@@ -60,15 +61,15 @@
       }
 
       .title {
-        font-size: 18.3rem;
+        font-size: 8.5rem;
         font-family: "Righteous", serif;
-        line-height: 17rem;
+        line-height: 9rem;
       }
 
       .subtitle {
-        font-size: 1.8rem;
+        text-align: center;
+        font-size: 1.6rem;
         font-family: "Comfortaa", serif;
-        margin-left: 0.8rem;
         text-transform: uppercase;
       }
     }
