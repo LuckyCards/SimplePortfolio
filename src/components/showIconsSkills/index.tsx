@@ -28,12 +28,13 @@ export default function () {
             sk.name === activeCard ? style.activeCard : ""
           }`}
           style={{
-            background: `linear-gradient(to right, ${sk.color}, #000000 350%`,
+            border: `2px ${sk.color} solid`,
           }}
           key={sk.name}
           onClick={() => HandleClickCard(sk.name)}>
           <h3>{sk.name}</h3>
           <img src={sk.icon} alt={`Icone de ${sk.name}`} />
+          <span className={style.type}>{sk.type}</span>
           <p>{sk.description}</p>
         </div>
       ))}

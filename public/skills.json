@@ -1,57 +1,65 @@
 [
   {
     "name": "HTML",
+    "type": "Linguagem de marcação de texto.",
     "description": "Html é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorHtml.png",
     "color": "#f06427"
   },
   {
     "name": "CSS",
+    "type": "Linguagem de folha de estilo.",
     "description": "css 5 é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorCss.png",
     "color": "#3168d8"
   },
   {
     "name": "JAVASCRIPT",
+    "type": "Linguagem de programação.",
     "description": "JAVASCRIPT é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorJavascript.png",
     "color": "#f5cc1c"
   },
   {
     "name": "REACT",
+    "type": "Biblioteca de Javascript para UI.",
     "description": "REACT é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorReact.png",
     "color": "#61dafb"
   },
   {
     "name": "SASS",
+    "type": "Linguagem de extensão de CSS.",
     "description": "SASS é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorSass.png",
     "color": "#cc6698"
   },
   {
     "name": "TYPESCRIPT",
+    "type": "Linguagem de programação tipada.",
     "description": "TYPESCRIPT é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorTypescript.png",
     "color": "#3178c6"
   },
   {
     "name": "GIT",
+    "type": "Sistema de controle de versão.",
     "description": "Git é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorGit.png",
     "color": "#dd4c35"
   },
   {
     "name": "GITHUB",
+    "type": "Plataforma de hospedagem de código.",
     "description": "Github é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorGithub.png",
-    "color": "#000"
+    "color": "#fff"
   },
   {
     "name": "BLENDER",
+    "type": "Software de criação 3D.",
     "description": "BLENDER é uma das lsalalsaldsaldalsdlsadlasl",
     "icon": "/public/assets/skillsIcons/uncolorBlender.png",
     "color": "#fa861a"
-
   }
 ]

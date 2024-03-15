@@ -29,13 +29,13 @@ export default function Presentation() {
           <LinkedinLogo className={style.socialIcons} />
         </a>
       </div>
-      <video
+      {/* <video
         autoPlay
         muted
         loop
         src={presentationVideo}
         className={style.presentationVideo}
-      />
+      /> */}
     </div>
   );
 }
