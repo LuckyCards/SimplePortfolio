@@ -2,9 +2,9 @@ import style from "./style.module.scss";
 import presentationVideo from "../../../public/background.mp4";
 import {
   InstagramLogo,
-  PinterestLogo,
-  TwitterLogo,
-  YoutubeLogo,
+  LinkedinLogo,
+  GithubLogo,
+  WhatsappLogo,
 } from "@phosphor-icons/react";
 
 export default function Presentation() {
@@ -17,16 +17,16 @@ export default function Presentation() {
       </div>
       <div className={style.social}>
         <a href="" target="_blank">
-          <TwitterLogo className={style.socialIcons} />
+          <GithubLogo className={style.socialIcons} />
         </a>
         <a href="" target="_blank">
           <InstagramLogo className={style.socialIcons} />
         </a>
         <a href="" target="_blank">
-          <YoutubeLogo className={style.socialIcons} />
+          <WhatsappLogo weight="light" className={style.socialIcons} />
         </a>
         <a href="" target="_blank">
-          <PinterestLogo className={style.socialIcons} />
+          <LinkedinLogo className={style.socialIcons} />
         </a>
       </div>
       <video

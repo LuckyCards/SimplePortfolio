@@ -17,7 +17,7 @@
     transition: color 0.3s ease-out;
 
     &:hover {
-      color: rgb(255, 230, 0);
+      color: var(--hovered-color);
       cursor: pointer;
     }
   }

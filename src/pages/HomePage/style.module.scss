@@ -50,6 +50,11 @@
       .socialIcons {
         font-size: 1.8rem;
         color: white;
+        transition: color .2s ease-in-out;
+
+        &:hover {
+          color: var(--hovered-color);
+        }
       }
     }
 

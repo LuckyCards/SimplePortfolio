@@ -1,0 +1,57 @@
+[
+  {
+    "name": "HTML",
+    "description": "Html é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorHtml.png",
+    "color": "#f06427"
+  },
+  {
+    "name": "CSS",
+    "description": "css 5 é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorCss.png",
+    "color": "#3168d8"
+  },
+  {
+    "name": "JAVASCRIPT",
+    "description": "JAVASCRIPT é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorJavascript.png",
+    "color": "#f5cc1c"
+  },
+  {
+    "name": "REACT",
+    "description": "REACT é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorReact.png",
+    "color": "#61dafb"
+  },
+  {
+    "name": "SASS",
+    "description": "SASS é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorSass.png",
+    "color": "#cc6698"
+  },
+  {
+    "name": "TYPESCRIPT",
+    "description": "TYPESCRIPT é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorTypescript.png",
+    "color": "#3178c6"
+  },
+  {
+    "name": "GIT",
+    "description": "Git é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorGit.png",
+    "color": "#dd4c35"
+  },
+  {
+    "name": "GITHUB",
+    "description": "Github é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorGithub.png",
+    "color": "#000"
+  },
+  {
+    "name": "BLENDER",
+    "description": "BLENDER é uma das lsalalsaldsaldalsdlsadlasl",
+    "icon": "/public/assets/skillsIcons/uncolorBlender.png",
+    "color": "#fa861a"
+
+  }
+]

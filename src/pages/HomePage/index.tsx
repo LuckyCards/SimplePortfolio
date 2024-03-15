@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import style from "./style.module.scss";
 import MenuHeader from "../../components/MenuHeader/index.js";
-import AboutPage from "../AboutPage";
+import SkillsPage from "../SkillsPage/index.tsx";
 import Presentation from "./presentation.tsx";
 
 export default function Home() {
@@ -54,7 +54,7 @@ export default function Home() {
 
         <MenuHeader />
         <main className={style.main}>
-          <AboutPage />
+          <SkillsPage />
           <div className={style.about}>Sobre</div>
           <div className={style.services}>Serviços</div>
           <div className={style.galery}>Galeria</div>
