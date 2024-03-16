@@ -22,6 +22,7 @@ export default function () {
 
   return (
     <div className={style.container}>
+      <div className={style.back}></div>
       {skills.map((sk) => (
         <div
           className={`${style.card} ${
