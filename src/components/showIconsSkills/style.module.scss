@@ -2,23 +2,19 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
-
-  background-size: cover;
+  position: relative;
 
   .card {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    min-width: 50px;
-    width: 70px;
-    height: 350px;
+    min-width: 75px;
+    width: 75px;
+    min-height: 75px;
+    height: 75px;
     overflow: hidden;
     position: relative;
     transition: all 0.5s ease;
-    background-image: url("https://th.bing.com/th/id/R.f20ec8c766240deaa8d8e5124385935f?rik=Jqg6B1XVLN%2fk8Q&riu=http%3a%2f%2fwww.86ps.com%2fUploadFiles%2fArticle%2f2016-1%2f0121%2f1%2f3.jpg&ehk=KGaWXpddOaRFO1%2fYekKVgkSPdxmpSc4vYZ%2b9adRT07o%3d&risl=&pid=ImgRaw&r=0");
-    background-size: contain;
-    background-position: 50px -260px;
-    background-attachment: fixed;
 
     cursor: pointer;
 
@@ -27,43 +23,60 @@
 
     img {
       position: absolute;
-      bottom: 0px;
+      left: 0;
       padding: 10px;
       width: 100%;
-
-      max-width: 80px;
-      height: fit-content;
+      filter: drop-shadow(2px 4px 3px rgb(0, 0, 0));
+      max-width: 70px;
       border-radius: 13px;
       user-select: none;
-
-      transform: translateX(0px);
     }
 
     h3 {
-      width: 30px;
-      font-size: 2rem;
+      position: absolute;
+      left: 75.5px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.7rem;
       user-select: none;
       text-wrap: nowrap;
       transition: transform 0.6s ease;
-      transform: translate(80px, 275px);
-    }
-
-    .type {
-      width: 50px;
-      text-wrap: nowrap;
-      transform: translate(80px, 276px);
-      font-size: 1.1rem;
-    }
-
-    p {
-      display: none;
+      overflow: hidden;
+      width: 210px;
     }
   }
 
-  .activeCard {
-    width: 600px;
+  .openCard {
+    animation: OpenCard 2s ease forwards;
+  }
+}
 
-    h3 {
-    }
+@keyframes OpenCard {
+  0% {
+    width: 75px;
+    border-radius: 13px;
+  }
+  30% {
+    width: 75px;
+    border-radius: 13px 13px 0 0;
+  }
+  100% {
+    width: 270px;
+    border-radius: 13px 13px 0 0;
+  }
+}
+
+@keyframes CloseCard {
+  0% {
+    width: 270px;
+    border-radius: 13px 13px 0 0;
+  }
+  80% {
+    width: 75px;
+    border-radius: 13px 13px 0 0;
+  }
+  100% {
+    width: 75px;
+    border-radius: 13px;
   }
 }
