@@ -12,25 +12,18 @@ type skillsType = {
 
 export default function () {
   const [skills, _] = useState<skillsType[]>(data);
-  const cardRefs = useRef<{ [key: string]: React.RefObject<HTMLDivElement> }>(
-    {}
-  );
-  const [cardOpen, setCardOpen] = useState<string>("");
-  const [animationTransition, setAnimationTransition] =
-    useState<boolean>(false);
+  const [openCard, setOpenCard] = useState<string | null>(null);
+  const [lastOpenedCard, setLastOpenedCard] = useState<string | null>(null);
 
-  useEffect(() => {
-    skills.forEach((skills: skillsType) => {
-      cardRefs.current[skills.name] = React.createRef();
-    });
-    console.log(cardRefs);
-  }, [skills]);
-
-  function HandleClickCard(sk: any) {
-    console.log("condição 0");
-    cardRefs.current[sk].current?.classList.add(style.cardOpen);
-    if (cardOpen == "") {
-      console.log("condição 1");
+  function handleClickCard(sk: string) {
+    if (openCard === sk) {
+      setOpenCard(null);
+      setLastOpenedCard(sk);
+    } else {
+      setOpenCard(sk);
+      if (openCard) {
+        setLastOpenedCard(openCard);
+      }
     }
   }
 
@@ -39,10 +32,9 @@ export default function () {
       {skills.map((sk) => (
         <div
           key={sk.name}
-          ref={cardRefs.current[sk.name]}
-          className={style.card}
+          className={`${style.card} ${ openCard === sk.name ? style.openCard : lastOpenedCard === sk.name ? style.closeCard : ""}`}
           style={{ border: `2px ${sk.color} solid` }}
-          onClick={() => HandleClickCard(sk.name)}>
+          onClick={() => handleClickCard(sk.name)}>
           <h3>{sk.name}</h3>
           <img src={sk.icon} alt={`Icone de ${sk.name}`} />
         </div>

@@ -44,14 +44,12 @@
       overflow: hidden;
       width: 210px;
     }
-
-    .cardOpen {
-      background-color: red !important;
-      animation: OpenCard 2s ease forwards;
-    }
-    .cardClose {
-      animation: CloseCard 2s ease forwards;
-    }
+  }
+  .openCard {
+    animation: OpenCard 2s ease forwards;
+  }
+  .closeCard {
+    animation: CloseCard 2s ease forwards;
   }
 }
 @keyframes OpenCard {
