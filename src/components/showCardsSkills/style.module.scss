@@ -1,0 +1,185 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .cardButton {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+
+    .card {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 75px;
+      width: 75px;
+      min-height: 75px;
+      height: 75px;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.5s ease;
+
+      cursor: pointer;
+
+      padding-bottom: 10px;
+      border-radius: 13px;
+
+      img {
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        width: 100%;
+        filter: drop-shadow(2px 4px 3px rgb(0, 0, 0));
+        max-width: 70px;
+        border-radius: 13px;
+        user-select: none;
+      }
+
+      h3 {
+        position: absolute;
+        left: 75.5px;
+        top: 35px;
+        transform: translateY(-50%);
+        font-size: 1.7rem;
+        user-select: none;
+        text-wrap: nowrap;
+        transition: transform 0.6s ease;
+        overflow: hidden;
+        width: 210px;
+      }
+    }
+  }
+  .cardInfo {
+    position: absolute;
+    top: 105px;
+    left: calc(147px - 40px);
+    width: 375px;
+    border: 2px solid white;
+    height: 0px;
+    border-top: none;
+
+    &::after {
+      content: "";
+      background-color: white;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      content: "";
+      background-color: white;
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.openCard {
+  animation: OpenCard 0.6s ease forwards;
+}
+.closeCard {
+  animation: CloseCard 1.2s ease forwards;
+}
+
+.openCardInfo {
+  animation: OpenCardInfo 1.2s ease forwards;
+}
+.closeCardInfo {
+  animation: CloseCardInfo 0.6s ease forwards;
+}
+
+@keyframes OpenCard {
+  0% {
+    width: 75px;
+    height: 75px;
+    border-radius: 13px;
+  }
+  90% {
+    width: 270px;
+    height: 75px;
+    border-radius: 13px 13px 0 0;
+
+    border-bottom: 2px solid;
+  }
+  100% {
+    width: 270px;
+    height: 91px;
+    border-radius: 13px 13px 0 0;
+    border-bottom: transparent;
+  }
+}
+
+@keyframes CloseCard {
+  0% {
+    width: 270px;
+    border-radius: 13px 13px 0 0;
+  }
+
+  50% {
+    width: 270px;
+    border-radius: 13px 13px 0 0;
+  }
+  80% {
+    width: 75px;
+    border-radius: 13px 13px 0 0;
+  }
+  100% {
+    width: 75px;
+    border-radius: 13px;
+  }
+}
+
+@keyframes OpenCardInfo {
+  0% {
+    width: 75px;
+    display: none;
+    height: 0px;
+  }
+  50% {
+    display: none;
+    width: 270px;
+    height: 0px;
+  }
+  75% {
+    width: 270px;
+
+    transform: translateX(0px);
+    height: 400px;
+  }
+  100% {
+    width: 470px;
+    transform: translateX(-100px);
+
+    height: 400px;
+  }
+}
+
+@keyframes CloseCardInfo {
+  100% {
+    width: 75px;
+    display: none;
+    height: 0px;
+  }
+  75% {
+    display: none;
+    width: 270px;
+    height: 0px;
+    border: 0px solid white;
+  }
+  50% {
+    border: 2px solid white;
+    width: 270px;
+  }
+  0% {
+    width: 270px;
+    height: 80px;
+  }
+}

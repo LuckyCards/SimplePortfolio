@@ -1,4 +1,4 @@
-import ShowIconsSkills from "../../components/showIconsSkills";
+import ShowIconsSkills from "../../components/showCardsSkills";
 import style from "./style.module.scss";
 
 export default function SkillsPage() {

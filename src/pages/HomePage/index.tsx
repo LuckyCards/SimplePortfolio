@@ -7,9 +7,8 @@ import Presentation from "./presentation.tsx";
 
 export default function Home() {
   const minScrollStrength = 3;
-  const [scrollY, setScrollY] = useState(0);
-  const [scrollCount, setScrollCount] = useState(minScrollStrength);
-
+  const [scrollY, setScrollY] = useState<number>(0);
+  const [scrollCount, setScrollCount] = useState<number>(minScrollStrength);
   const [PresentationView, setPresentationView] = useState(
     style.showPresentationView
   );
